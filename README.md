@@ -1,5 +1,3 @@
-# Leistungsstarkes Lobby-Plugin für Minecraft Netzwerk
-
 ![Java](https://img.shields.io/badge/Java-Programmierung-black?style=for-the-badge&logo=java)
 
 ## Überblick
