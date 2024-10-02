@@ -1,41 +1,69 @@
-![Java](https://img.shields.io/badge/Java-Programmierung-black?style=for-the-badge&logo=java)
+# Lobby Plugin für BungeeCord
 
-## Überblick
+Das Lobby Plugin für BungeeCord ermöglicht eine nahtlose Kommunikation zwischen dem BungeeCord-Server und dem Lobby-Server. Es bietet grundlegende Funktionen für die Verwaltung der Lobby-Umgebung und verbessert das Spielerlebnis.
 
-Dieses GitHub-Repository enthält den Quellcode für ein leistungsstarkes Lobby-Plugin, das speziell für die Bedürfnisse eines Minecraft-Netzwerks entwickelt wurde. Das Plugin bietet eine umfassende Lösung für die Lobby-Verwaltung und -Anpassung, um Spielern ein optimales Einstiegserlebnis zu bieten.
+## Inhaltsverzeichnis
 
-## Funktionen
+- [Features](#features)
+- [Technologien](#technologien)
+- [Installation](#installation)
+- [Konfiguration](#konfiguration)
+- [Verwendung](#verwendung)
+- [Beitrag leisten](#beitrag-leisten)
+- [Lizenz](#lizenz)
 
-- **Umfassende Lobby-Verwaltung:** Verwalte verschiedene Aspekte der Lobby wie Spawnpunkte, Portale, Schilder und mehr.
-- **Anpassungsmöglichkeiten:** Passe das Aussehen und Verhalten der Lobby an die Bedürfnisse deines Netzwerks an.
-- **Optimales Einstiegserlebnis:** Biete Spielern eine einladende und benutzerfreundliche Lobby, um ihr Spielerlebnis zu verbessern.
-- **Integration:** Integriere das Plugin nahtlos in dein bestehendes Minecraft-Netzwerk und erweitere es nach Bedarf.
+## Features
 
-## Anforderungen
+- Verbindung zwischen BungeeCord- und Lobby-Server
+- Spieler-Management (z. B. Teleportation, Statusanzeigen)
+- Anpassbare Lobby-Umgebung
+- Einfache Konfiguration über die `config.yml`
 
-- Spigot- oder Bukkit-Server für die Ausführung des Plugins
+## Technologien
+
+- [Java](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html)
+- [BungeeCord](https://www.spigotmc.org/wiki/bungeecord/)
+- [Maven](https://maven.apache.org/) (für das Build-Management)
 
 ## Installation
 
-1. Lade die JAR-Datei des Plugins herunter und platziere sie im "plugins"-Ordner deines Minecraft-Servers.
-2. Starte den Server neu oder führe den Befehl `/reload` aus, um das Plugin zu laden.
-3. Konfiguriere die Lobby nach deinen Wünschen mithilfe der Plugin-Dokumentation.
+1. Klone das Repository:
+
+   ```bash
+   git clone https://github.com/deinbenutzername/lobby-plugin.git
+   cd lobby-plugin
+   ```
+
+2. Baue das Plugin mit Maven:
+
+   ```bash
+   mvn clean package
+   ```
+
+3. Kopiere die generierte JAR-Datei aus dem `target`-Ordner in den `plugins`-Ordner deines BungeeCord-Servers.
+
+## Konfiguration
+
+Die Konfiguration erfolgt über die `config.yml`, die im `plugins/LobbyPlugin`-Ordner generiert wird. Hier kannst du die Einstellungen für die Kommunikation zwischen dem BungeeCord-Server und dem Lobby-Server anpassen:
+
+```yaml
+bungeecord:
+  host: "localhost"
+  port: 25577
+
+lobby:
+  server-name: "Lobby"
+  max-players: 100
+```
 
 ## Verwendung
 
-1. Passe die Lobby an die Bedürfnisse deines Netzwerks an, indem du die Konfiguration anpasst und Features aktivierst/deaktivierst.
-2. Überwache die Lobby-Performance und behebe auftretende Probleme rechtzeitig.
-3. Biete Spielern ein angenehmes Einstiegserlebnis, um ihre Spielerbindung zu erhöhen und das Netzwerk zu stärken.
+Starte deinen BungeeCord-Server und den Lobby-Server. Stelle sicher, dass die `config.yml` korrekt konfiguriert ist. Spieler können dann in die Lobby teleportiert werden und das Plugin wird die Kommunikation zwischen den Servern verwalten.
 
-## Beitrag
+## Beitrag leisten
 
-Beiträge zu diesem Projekt sind willkommen! Wenn du auf Fehler stoßt oder Vorschläge zur Verbesserung hast, öffne bitte ein Problem im GitHub-Repository.
+Beiträge sind willkommen! Bitte öffne ein Issue oder erstelle einen Pull Request, um Ideen oder Verbesserungen vorzuschlagen.
 
 ## Lizenz
 
-Dieses Projekt ist unter der MIT-Lizenz lizenziert. Details findest du in der [LICENSE](LICENSE)-Datei.
-
-## Danksagungen
-
-- Ein besonderer Dank gilt der Minecraft-Community für ihre Unterstützung und Inspiration.
-- Dank an die Entwickler von Spigot und Bukkit für ihre Arbeit an der Minecraft-Server-Software.
+Dieses Projekt steht unter der MIT-Lizenz. Siehe die [LICENSE](LICENSE)-Datei für weitere Informationen.
